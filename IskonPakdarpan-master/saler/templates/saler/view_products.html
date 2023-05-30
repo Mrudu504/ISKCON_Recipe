@@ -1,0 +1,83 @@
+{% extends 'saler/base.html' %}
+{% block saler_head %}
+
+{% endblock saler_head %}
+{% load crispy_forms_tags %}
+
+{% block saler_body %}
+<div class="container-fluid">
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-{{message.tags}}">{{ message }}</div>
+	{% endfor %}
+	{% endif %}
+	<div class="row p-1">
+		<div class="col-md-4">
+			<a href="{% url 'home' %}" class="logo">Pakdarpan</i></a>
+		</div>
+		<div class="col-md-4">
+			<h4 style="font-weight: bold; padding: 0; margin: 0; text-align: center;">Recipes</h4>
+		</div>
+		
+	</div>
+	<hr class="p-0 m-0 mb-2">
+	<div class="noteCard">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Product Id</th>
+					<th scope="col">Product Name</th>
+					<th scope="col">category</th>
+					<th scope="col">SubCategory</th>
+					<th scope="col">price</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="col">49</th>
+					<th scope="col">Dal</th>
+					<th scope="col">Breakfast</th>
+					<th scope="col">Indian</th>
+					<th scope="col">40</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+				<tr>
+					<th scope="col">57</th>
+					<th scope="col">Gulabjam</th>
+					<th scope="col">Sweet</th>
+					<th scope="col">Indian</th>
+					<th scope="col">25</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+				<tr>
+					<th scope="col">63</th>
+					<th scope="col">chana Dal Aamti</th>
+					<th scope="col">Dal</th>
+					<th scope="col">Indian</th>
+					<th scope="col">50</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+				<tr>
+					<th scope="col">97</th>
+					<th scope="col">Elissary</th>
+					<th scope="col">Dal</th>
+					<th scope="col">Indian</th>
+					<th scope="col">60</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+				<tr>
+					<th scope="col">104</th>
+					<th scope="col">Chhaach</th>
+					<th scope="col">Beverages</th>
+					<th scope="col">South Indian</th>
+					<th scope="col">10</th>
+					<th scope="col" style="text-align: right;"><i class="fa fa-trash" aria-hidden="true"></i></th>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+	</div>
+</div>
+
+{% endblock saler_body %}
